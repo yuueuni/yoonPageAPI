@@ -1,5 +1,6 @@
 package com.page.yoon.entity;
 
+import com.page.yoon.exception.NotEnoughStockException;
 import jakarta.persistence.*;
 
 import java.util.Date;
@@ -32,4 +33,16 @@ public class Stock {
     @Embedded
     private Base base;
 
+    // 비즈니스 로직
+    public void addStock(int quantity) {
+        this.quantity += quantity;
+    }
+
+    public void removeStock(int quantity) {
+        int restStock = this.quantity - quantity;
+        if (restStock < 0) {
+            throw new NotEnoughStockException("need more stock");
+        }
+        this.quantity = restStock;
+    }
 }
