@@ -39,3 +39,4 @@ out/
 ### additional ###
 /mysql/db/
 .DS_Store
+*.env
