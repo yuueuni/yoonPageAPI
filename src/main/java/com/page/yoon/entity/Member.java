@@ -4,8 +4,7 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.Date;
-
+import java.time.LocalDateTime;
 
 @Entity
 @Getter @Setter
@@ -20,7 +19,7 @@ public class Member {
     @Column(name = "name", nullable = false, length = 255)
     private String name;
 
-    @Column(name = "pw", nullable = false, length = 255)
+    @Column(name = "password", nullable = false, length = 255)
     private String password;
 
     @Column(name = "phone", length = 255)
@@ -31,6 +30,6 @@ public class Member {
 
     @Column(name = "expired_at")
     @Temporal(TemporalType.TIMESTAMP)
-    private Date expiredAt;
+    private LocalDateTime expiredAt;
 
 }

@@ -2,8 +2,6 @@ package com.page.yoon.entity;
 
 import jakarta.persistence.*;
 
-import java.util.Date;
-
 @Entity
 @Table(name = "option", schema = "yoonpage")
 public class Option {

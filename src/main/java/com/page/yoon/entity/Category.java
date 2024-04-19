@@ -2,7 +2,6 @@ package com.page.yoon.entity;
 
 import jakarta.persistence.*;
 
-import java.util.Date;
 
 
 @Entity

@@ -2,7 +2,7 @@ package com.page.yoon.entity;
 
 import jakarta.persistence.*;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "discount", schema = "yoonpage")
@@ -24,11 +24,11 @@ public class Discount {
 
     @Column(name = "start")
     @Temporal(TemporalType.TIMESTAMP)
-    private Date start;
+    private LocalDateTime start;
 
     @Column(name = "end")
     @Temporal(TemporalType.TIMESTAMP)
-    private Date end;
+    private LocalDateTime end;
 
     @Column(name = "product_id", nullable = false)
     private Integer productId;

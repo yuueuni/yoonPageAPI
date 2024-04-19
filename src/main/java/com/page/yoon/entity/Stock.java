@@ -3,7 +3,7 @@ package com.page.yoon.entity;
 import com.page.yoon.exception.NotEnoughStockException;
 import jakarta.persistence.*;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "stock", schema = "yoonpage")
@@ -25,7 +25,7 @@ public class Stock {
 
     @Column(name = "restocked_at")
     @Temporal(TemporalType.TIMESTAMP)
-    private Date restockedAt;
+    private LocalDateTime restockedAt;
 
     @Column(name = "status", nullable = false, length = 255)
     private String status;
