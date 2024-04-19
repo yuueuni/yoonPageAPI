@@ -1,9 +1,6 @@
 spring:
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/yoonpage?serverTimezone=Asia/Seoul
-    username: page # ${DB_USERNAME}
-    password: page1234
+  profiles:
+    active: local
 
   jpa:
     properties:
