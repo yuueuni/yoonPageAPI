@@ -99,7 +99,9 @@ create table yoonpage.`order` (
   `payment_id` int not null,
   `member_id` int not null,
   `created_at` datetime not null default now(),
-  `updated_at` datetime on update now()
+  `created_by` int,
+  `updated_at` datetime on update now(),
+  `updated_by` int
 );
 
 create table yoonpage.`order_item` (
