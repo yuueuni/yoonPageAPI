@@ -38,4 +38,6 @@ out/
 
 ### additional ###
 /mysql/db/
+/mysql/mysql.env
 .DS_Store
+*.env

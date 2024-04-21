@@ -1,0 +1,17 @@
+spring:
+  profiles:
+    active: local
+
+  jpa:
+    properties:
+      hibernate:
+#        show_sql: true
+        format_sql: true
+    hibernate:
+      ddl-auto: validate # create, validate
+    database-platform: org.hibernate.dialect.MySQLDialect
+
+logging:
+  level:
+    org.hibernate.SQL: debug
+    org.hibernate.type: trace
