@@ -11,7 +11,7 @@ public class Product {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", nullable = false)
+    @Column(name = "id")
     private Integer id;
 
     @Column(name = "name", nullable = false, length = 255)
@@ -24,8 +24,9 @@ public class Product {
     @JoinColumn(name = "discount_id")
     private Discount discount;
 
-    @Column(name = "category_id", nullable = false)
-    private Integer categoryId;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "category_id")
+    private Category category;
 
     @Embedded
     private Base base;

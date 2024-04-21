@@ -8,7 +8,7 @@ public class Option {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", nullable = false)
+    @Column(name = "id")
     private Integer id;
 
     @Column(name = "name", nullable = false, length = 255)
@@ -17,8 +17,9 @@ public class Option {
     @Column(name = "price")
     private Integer price;
 
-    @Column(name = "stock_id", nullable = false)
-    private Integer stockId;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "stock_id")
+    private Stock stock;
 
     @Embedded
     private Base base;
