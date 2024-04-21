@@ -30,9 +30,6 @@ public class Discount {
     @Temporal(TemporalType.TIMESTAMP)
     private LocalDateTime end;
 
-    @Column(name = "product_id", nullable = false)
-    private Integer productId;
-
     @Embedded
     private Base base;
 

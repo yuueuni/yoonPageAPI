@@ -20,8 +20,9 @@ public class Product {
     @Column(name = "price", nullable = false)
     private Integer price;
 
-    @Column(name = "discount_type", length = 255)
-    private String discountType;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "discount_id")
+    private Discount discount;
 
     @Column(name = "category_id", nullable = false)
     private Integer categoryId;

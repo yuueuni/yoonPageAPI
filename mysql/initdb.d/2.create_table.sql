@@ -22,7 +22,7 @@ create table yoonpage.`product` (
   `id` int primary key,
   `name` varchar(255) not null,
   `price` int not null,
-  `discount_type` varchar(255),
+  `discount_id` int not null,
   `category_id` int not null,
   `created_at` datetime not null default now(),
   `created_by` int,
@@ -37,7 +37,6 @@ create table yoonpage.`discount` (
   `rate` int not null default 0,
   `start` datetime,
   `end` datetime,
-  `product_id` int not null,
   `created_at` datetime not null default now(),
   `created_by` int,
   `updated_at` datetime on update now(),
@@ -139,9 +138,8 @@ alter table `option` add foreign key (`stock_id`) references `stock` (`id`);
 alter table `product_option` add foreign key (`option_id`) references `option` (`id`);
 alter table `product_option` add foreign key (`product_id`) references `product` (`id`);
 
-alter table `discount` add foreign key (`product_id`) references `product` (`id`);
-
 alter table `product` add foreign key (`category_id`) references `category` (`id`);
+alter table `product` add foreign key (`discount_id`) references `discount` (`id`);
 
 alter table `order` add foreign key (`member_id`) references `member` (`id`);
 alter table `order` add foreign key (`payment_id`) references `payment` (`id`);
