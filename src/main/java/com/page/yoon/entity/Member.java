@@ -25,11 +25,11 @@ public class Member {
     @Column(name = "phone", length = 255)
     private String phone;
 
-    @Embedded
-    private Base base;
-
     @Column(name = "expired_at")
     @Temporal(TemporalType.TIMESTAMP)
     private LocalDateTime expiredAt;
+
+    @Embedded
+    private Base base;
 
 }
