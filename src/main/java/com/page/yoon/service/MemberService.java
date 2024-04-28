@@ -15,25 +15,6 @@ import java.util.List;
 @RequiredArgsConstructor
 public class MemberService {
 
-    /**
-     * MemberRepository 주입 방법
-     *
-     * 1. 필드 주입은 까다로움 변경시..?
-        @Autowired
-        private MemberRepository memberRepository;
-     * 2. 런타임 중 바꿀일 없으므로 setter 비권장
-        @Autowired
-        public void setMemberRepository(MemberRepository memberRepository) {
-            this.memberRepository = memberRepository;
-        }
-     * 3. 생성자 권장
-        @Autowired
-        public MemberService(MemberRepository memberRepository) {
-            this.memberRepository = memberRepository
-        }
-        -> @AllArgsConstructor 사용시 spring 이 알아서 해줌..
-            @RequiredArgsConstructor 는 final 만 (final 권장함)
-     */
     private final MemberRepository memberRepository;
 
 
