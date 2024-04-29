@@ -65,8 +65,6 @@ class MemberServiceTest {
         // when
         memberService.join(member1);
 
-        // junit4 @Test(expected = IllegalStateException.class)
-        // junit5 assertThrows(IllegalStateException.class, () -> {})
         assertThrows(IllegalStateException.class, () -> {
             // 중복 에러로 예외 발생함
             memberService.join(member2);
