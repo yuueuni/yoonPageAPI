@@ -2,9 +2,7 @@ package com.page.yoon.service;
 
 import com.page.yoon.entity.Member;
 import com.page.yoon.repository.MemberRepository;
-import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -29,14 +27,6 @@ public class MemberService {
         return member.getId();
     }
 
-    private void validateDuplicateMember(Member member) {
-        // Exception
-        List<Member> findMembers = memberRepository.findByName(member.getName());
-        if (!findMembers.isEmpty()) {
-            throw new IllegalStateException("존재하는 회원");
-        }
-    }
-
     /**
      * 회원 전체 조회
      */
@@ -49,5 +39,17 @@ public class MemberService {
      */
     public Member findOne(Integer memberId) {
         return memberRepository.findOne(memberId);
+    }
+
+    /**
+     * 이름으로 회원 조회
+     * @param member
+     */
+    private void validateDuplicateMember(Member member) {
+        // Exception
+        List<Member> findMembers = memberRepository.findByName(member.getName());
+        if (!findMembers.isEmpty()) {
+            throw new IllegalStateException("존재하는 회원");
+        }
     }
 }
