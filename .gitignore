@@ -41,3 +41,4 @@ out/
 /mysql/mysql.env
 .DS_Store
 *.env
+/src/main/generated/
