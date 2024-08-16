@@ -4,7 +4,6 @@ import com.page.yoon.entity.Base;
 import com.page.yoon.entity.Member;
 import com.page.yoon.repository.MemberRepository;
 import org.junit.jupiter.api.Test;
-import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -14,7 +13,6 @@ import java.time.LocalDateTime;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-@RunWith(SpringRunner.class)
 @SpringBootTest
 @Transactional
 class MemberServiceTest {
@@ -31,6 +29,7 @@ class MemberServiceTest {
         member.setName("name");
         member.setPhone("01012341234");
         member.setPassword("password");
+        member.setEmail("email@yoonpage.com");
 
         Base base = new Base();
         base.setCreatedAt(LocalDateTime.now());

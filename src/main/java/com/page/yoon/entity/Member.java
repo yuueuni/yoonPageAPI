@@ -25,6 +25,9 @@ public class Member {
     @Column(name = "phone", length = 255)
     private String phone;
 
+    @Column(name = "email", length = 255)
+    private String email;
+
     @Column(name = "expired_at")
     @Temporal(TemporalType.TIMESTAMP)
     private LocalDateTime expiredAt;
