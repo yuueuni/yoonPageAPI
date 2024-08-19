@@ -1,4 +1,4 @@
-package com.page.yoon.entity;
+package com.page.yoon.common.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;
