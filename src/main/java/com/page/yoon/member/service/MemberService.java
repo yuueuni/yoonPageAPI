@@ -1,7 +1,7 @@
-package com.page.yoon.service;
+package com.page.yoon.member.service;
 
-import com.page.yoon.entity.Member;
-import com.page.yoon.repository.MemberRepository;
+import com.page.yoon.member.entity.Member;
+import com.page.yoon.member.repository.MemberRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

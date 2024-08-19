@@ -1,12 +1,12 @@
 package com.page.yoon.service;
 
-import com.page.yoon.entity.Base;
-import com.page.yoon.entity.Member;
-import com.page.yoon.repository.MemberRepository;
+import com.page.yoon.common.entity.Base;
+import com.page.yoon.member.entity.Member;
+import com.page.yoon.member.service.MemberService;
+import com.page.yoon.member.repository.MemberRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;

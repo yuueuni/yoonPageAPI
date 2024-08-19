@@ -1,10 +1,8 @@
-package com.page.yoon.repository;
+package com.page.yoon.member.repository;
 
-import com.page.yoon.entity.Member;
+import com.page.yoon.member.entity.Member;
 import jakarta.persistence.EntityManager;
-import jakarta.persistence.PersistenceContext;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
