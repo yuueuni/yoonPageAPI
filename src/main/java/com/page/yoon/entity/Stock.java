@@ -1,5 +1,6 @@
 package com.page.yoon.entity;
 
+import com.page.yoon.common.entity.Base;
 import com.page.yoon.exception.NotEnoughStockException;
 import jakarta.persistence.*;
 

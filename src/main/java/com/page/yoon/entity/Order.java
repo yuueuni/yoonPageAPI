@@ -1,5 +1,7 @@
 package com.page.yoon.entity;
 
+import com.page.yoon.common.entity.Base;
+import com.page.yoon.member.entity.Member;
 import jakarta.persistence.*;
 
 @Entity

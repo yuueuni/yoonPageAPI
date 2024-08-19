@@ -1,6 +1,7 @@
 package com.page.yoon.entity;
 
 import com.page.yoon.Enum.OrderStatus;
+import com.page.yoon.common.entity.Base;
 import jakarta.persistence.*;
 
 @Entity
