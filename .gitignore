@@ -35,3 +35,10 @@ out/
 
 ### VS Code ###
 .vscode/
+
+### additional ###
+/mysql/db/
+/mysql/mysql.env
+.DS_Store
+*.env
+/src/main/generated/
